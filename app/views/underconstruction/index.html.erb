@@ -49,7 +49,16 @@
 						</p>					
 					</div>
 					<div class="col-md-6">
-						<form id="newsletter-form" class="form-inline" role="form">
+						<%= form_for Lead.new, :html => {:class => 'form-inline', :id => 'newsletter-form'} do |f| %>
+							<div class="form-group">
+								<%= f.label :email, class: 'sr-only' %>
+								<%= f.email_field :email, {class: 'form-control', id: 'emailInputNewsletter', placeholder: 'Tu Email'} %>
+								<%= f.hidden_field :device, :value => request.env['mobvious.device_type'] %>
+								<%= f.hidden_field :country %>
+								<%= f.button 'Enviar', {id: 'newsletter-submit', class: 'btn btn-submit'} %>
+							</div>							
+						<% end %>
+						<!--<form id="newsletter-form" class="form-inline" role="form">
 							<div class="form-group">
 								<label class="sr-only" for="emailInputNewsletter">Email address</label>
 								<input type="email" name="emailInputNewsletter" class="form-control" id="emailInputNewsletter" placeholder="Tu email">
@@ -59,7 +68,7 @@
 							</div>
 							<small>Tranquilo(a), no utilizaremos tu correo para enviar spam.</small>
 							<div id="newsletter-form-response"></div>
-						</form>
+						</form>-->
 					</div>
 				</div>
 			</div>

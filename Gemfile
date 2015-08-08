@@ -50,3 +50,5 @@ group :development, :test do
   gem 'spring'
 end
 
+# Detect Device
+gem 'mobvious'

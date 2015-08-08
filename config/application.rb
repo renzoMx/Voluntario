@@ -26,5 +26,8 @@ module Voluntario
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
     
     config.assets.paths += Dir["#{Rails.root}/vendor/assets/*"].sort_by { |dir| -dir.size }
+
+    # Recognize Device
+    config.middleware.use Mobvious::Manager
   end
 end
