@@ -117,7 +117,7 @@ Version: 2.2
 	/*
 	 * NEWSLETTER FORM
 	 */
-	$("#newsletter-submit").on('click', function(e) {
+	/*$("#newsletter-submit").on('click', function(e) {
 		e.preventDefault();
 		$("#newsletter-submit").html("<i class='fa fa-cog fa-spin'></i> SENDING").prop('disabled', true);
 		var $newsletter_form = $('#newsletter-form');
@@ -125,7 +125,7 @@ Version: 2.2
 		
 		/*
 		 * 
-		 */
+		 
 		
 		$.ajax({
 			type : "POST",
@@ -141,7 +141,7 @@ Version: 2.2
 			}
 		});
 		return false;
-	});
+	});*/
 	
 
 

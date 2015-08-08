@@ -1,0 +1,6 @@
+<% if @lead.errors.any? %>
+	alert("Debe ingresar su email!");
+<% else %>
+	$('#newsletter-form').hide();
+	$('#success-submit').text('Gracias por suscribirte, estaremos en contacto!');
+<% end %> 	

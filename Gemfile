@@ -52,3 +52,5 @@ end
 
 # Detect Device
 gem 'mobvious'
+# Detect Geolocation from User IP
+gem 'geocoder'
