@@ -52,5 +52,5 @@ end
 
 # Detect Device
 gem 'mobvious'
-# Detect Geolocation from User IP
-gem 'geocoder'
+# Detect Location from User IP
+gem 'geocoder', '~> 1.2.9'

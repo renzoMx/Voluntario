@@ -52,7 +52,7 @@
 					<% if cookies[:save_lead] %>
 						<p id="success-submit">Gracias por suscribirte, estaremos en contacto!</p>
 					<% else %>
-						<% @country = Geocoder.search(@client_ip).first.country %>
+						<% @country = Geocoder::search(@client_ip).first.country %>
 						<%= form_for Lead.new, remote:true, :html => {:class => 'form-inline', :id => 'newsletter-form'} do |f| %>
 							<div class="form-group">
 								<%= f.label :email, class: 'sr-only' %>
