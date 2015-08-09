@@ -18,7 +18,7 @@ class Lead < ActiveRecord::Base
 				:DATES => DateTime.now.to_date
 			},
 			:double_optin => false,
-			:send_welcome => true
+			:send_welcome => false
 		})
 
 		# End
