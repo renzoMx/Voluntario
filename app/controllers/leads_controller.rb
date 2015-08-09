@@ -3,7 +3,7 @@ class LeadsController < ApplicationController
 		@lead = Lead.new lead_params
 
 		respond_to do |format|
-			if @lead.save
+			if @lead.save				
 				cookies[:save_lead] = true
 				format.html { redirect_to root_path }
 				format.js							

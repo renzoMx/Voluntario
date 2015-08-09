@@ -54,3 +54,5 @@ end
 gem 'mobvious'
 # Detect Location from User IP
 gem 'geocoder', '~> 1.2.9'
+# For mailchimp 
+gem 'gibbon', '~> 1.2.1'
