@@ -56,3 +56,5 @@ gem 'mobvious'
 gem 'geocoder', '~> 1.2.9'
 # For mailchimp 
 gem 'gibbon', '~> 1.2.1'
+# Validate email
+gem 'validates_email_format_of'
