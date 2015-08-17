@@ -50,6 +50,11 @@ group :development, :test do
   gem 'spring'
 end
 
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
+
 # Detect Device
 gem 'mobvious'
 # Detect Location from User IP
@@ -58,3 +63,8 @@ gem 'geocoder', '~> 1.2.9'
 gem 'gibbon', '~> 1.2.1'
 # Validate email
 gem 'validates_email_format_of'
+
+# For Google Maps API <- Require underscorejs
+gem 'gmaps4rails', '~> 2.1.2'
+# Underscrore 
+gem 'underscore-rails', '~> 1.8.3'

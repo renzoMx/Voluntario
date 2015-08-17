@@ -18,3 +18,5 @@
 //= require_tree .
 //= require plugins
 //= require main
+//= require underscore
+//= require gmaps/google

@@ -64,10 +64,10 @@
 							<small>Tranquilo(a), no utilizaremos tu correo para enviar spam.</small>
 							<div id="newsletter-form-response">
 								<% if notice %>
-									<%= notice %>
+									<p class="done"><%= notice %></p>
 								<% end %>
 								<% if alert %>
-									<%= alert %>
+									<p class="notice"><%= alert %></p>
 								<% end %>
 							</div>						
 						<% end %>
@@ -81,39 +81,14 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<h2><i class="fa fa-flask"></i> What we do</h2>
-						<p>
-							We create awesome stuff. Check out what we can do for you!
-						</p>
-						<div id="owl-carousel" class="owl-carousel">
-							<div class="owl-container text-center">
-								<div class="img-container"><img src="assets/icons/1.png" class="img-responsive" alt="" /></div><h2>We Work</h2>
-								<p>We work 24/7 a day to keep you satisfied.</p>
-							</div>
-							<div class="owl-container text-center">
-								<div class="img-container"><img src="assets/icons/2.png" class="img-responsive" alt="" /></div><h2>We Love</h2>
-								<p>We love our products.</p>
-							</div>
-							<div class="owl-container text-center">
-								<div class="img-container"><img src="assets/icons/3.png" class="img-responsive" alt="" /></div><h2>We're Mobile</h2>
-								<p>Connect with us from any device.</p>
-							</div>
-							<div class="owl-container text-center">
-								<div class="img-container"><img src="assets/icons/4.png" class="img-responsive" alt="" /></div><h2>We Repair</h2>
-								<p>Something is broken? We can fix it.</p>
-							</div>
-							<div class="owl-container text-center">
-								<div class="img-container"><img src="assets/icons/5.png" class="img-responsive" alt="" /></div><h2>We Conjure</h2>
-								<p>We've got some magic hands.</p>
-							</div>
-							<div class="owl-container text-center">
-								<div class="img-container"><img src="assets/icons/6.png" class="img-responsive" alt="" /></div><h2>We Drink</h2>
-								<p>30 cups of coffee a day.</p>
-							</div>
-							<div class="owl-container text-center">
-								<div class="img-container"><img src="assets/icons/7.png" class="img-responsive" alt="" /></div><h2>We find</h2>
-								<p>We find what you are looking for.</p>
-							</div>
+						<h2><i class="fa fa-flask"></i> Acerca de Voluntario</h2>
+						<div class="col-lg-6">
+							<h3 style="margin-top:0;">¿Quienes Sómos?</h3>
+							<p>Voluntari.org es una iniciativa que fomenta la cultura de voluntariado brindando información interesante y real sobre instituciones e organizaciones benéficas.</p>
+						</div>
+						<div class="col-lg-6">
+							<h3 style="margin-top:0;">¿Qué hacemos?</h3>
+							<p>A través de nuestro portal trabajamos la motivación para que más personas decidan involucrarse con iniciativas sociales, construimos redes de interacción y participación voluntaria, y creamos vínculos de colaboración a largo plazo entre dichos individuos y las organizaciones partícipes.</p>
 						</div>
 					</div>
 				</div>
@@ -131,44 +106,42 @@
 						<address>
 							<strong>Volutario.pe</strong>
 							<br>
-							795 Folsom Ave, Suite 600
+							San Borja Sur #679
 							<br>
-							San Francisco, CA 94107
+							Lima, Perú
 							<br>
-							<abbr title="Phone">P:</abbr> (123) 456-7890
+							<abbr title="Phone">Telf.:</abbr> (+51) 992-683358
 							<br>
-							<a href="mailto:#">info@voluntario.pe</a>
+							<a href="mailto:#">contacto@voluntario.pe</a>
 						</address>
 						<p>
 							Envíanos un mensaje electrónico.
 						</p>
 					</div>
 					<div class="col-md-6">
-							<h3>Where we are located</h3>
-							<figure  class="gmap">
-									<img src="http://maps.google.com/maps/api/staticmap?center=New%20York%20City&zoom=15&size=640x200&maptype=roadmap&sensor=false&markers=icon:http://themes.createbrilliance.com/Soonr/theme/img/map-marker.png|New%20York%20City" alt=" "/>
-							</figure>
-
+							<h3>Donde estamos ubicados?</h3>
+						<div style="width:100%">
+							<div id="map" style="width:100%;height:200px;"></div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</article>
 		
 	</section>
-
+	
 	<section id="head">
 			<div class="container">
 				<div class="row animated" data-animation-delay="500" data-animation="bounceInDown">
 					<div class="col-md-12 text-center">
-						<h1>¡Estamos en 
-						<br/>
-						Construccón!</h1>
+						<img src="assets/logo.png" alt="Voluntario" class="logo">
+						<h1 class="title-h1">¡Estamos en Construccón!</h1>
 						<hr>
-						<h3> 
-							Bienvenidos a <b>Voluntario.pe</b>
+						<h3 class="info-text"> 
+							Bienvenidos a <b>Voluntario.pe</b> <br>
 Estamos desarrollando al primer portal de voluntariado y responsabilidad social online de nuestro país. 
 Suscríbete y te avisaremos apenas abramos las puertas de nuestra nueva comunidad. 
-Únete a la evolución del trabajo <b>voluntario</b> en el Perú.</br></br>
+Únete a la evolución del trabajo voluntario en el Perú.</br></br>
 										
 						<a href="#" class="show-modal btn btn-default" data-modal="newsletter"><i class="fa fa-envelope-o"></i> SUSCRIBIRSE</a>
 						</h3>
@@ -182,19 +155,24 @@ Suscríbete y te avisaremos apenas abramos las puertas de nuestra nueva comunida
 				<div class="row text-center animated" data-animation-delay="200" data-animation="bounceIn">
 					<div class="col-md-12">
 						<div class="social-icons">
-							<a href="#" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>	
-							<a href="#" target="_blank" class="youtube"><i class="fa fa-youtube-play"></i> </a>						
-							<a href="#" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i> </a>							
-							<a href="#" target="_blank" class="instagram"><i class="fa fa-instagram"></i> </a>
+							<a href="https://www.facebook.com/VoluntariOrg" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>	
+							<a href="https://twitter.com/VoluntariOrg" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>	
+							<a href="https://www.youtube.com/channel/UC9WII6SzHn8n3BMdLUqKWnA
+" target="_blank" class="youtube"><i class="fa fa-youtube-play"></i> </a>						
+							<a href="https://www.linkedin.com/company/voluntari
+" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i> </a>							
+							<a href="https://www.pinterest.com/VoluntariOrg/
+" target="_blank" class="pinterest"><i class="fa fa-pinterest"></i> </a>
 						</div>
 					</div>
-					        <p class="copy">&copy; Voluntario.pe <%= Time.now.year %></p>
+					        <p class="copy">&copy; Voluntario.pe es gestionado por SumakQausay.<br>
+Lima, Perú -<%= Time.now.year %></p>
 				</div>
 			</div>
     </footer>
 
       
-      <div class="bokeh"></div>
+     <div class="bokeh"></div>
       				
 		<div id="slides">
 			<div class="slides-container">

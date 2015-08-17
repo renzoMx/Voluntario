@@ -179,7 +179,4 @@ $(window).load(function(){
 	
 }); //window load
 
-
-
-
 }(jQuery));
