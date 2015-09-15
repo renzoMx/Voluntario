@@ -1,0 +1,142 @@
+#video-wrapper
+  /[if lt IE 7]
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+  #preloader
+    #spinner_container
+      %img{:alt => "", :src => "assets/spinner.gif"}/
+  / Side Menu
+  %nav#menu-toggle.bt-menu-close
+    %a.bt-menu-trigger{:href => "#"}
+      %span Menu
+  #sidebar-wrapper
+    %ul.sidebar-nav
+      %li.sidebar-brand
+        Menú
+      %li.show-modal.nav-newsletter{"data-modal" => "newsletter"}
+        %a{:href => "#"}
+          %i.fa.fa-envelope-o
+          Suscríbete
+      %li.show-modal.nav-about{"data-modal" => "about"}
+        %a{:href => "#"}
+          %i.fa.fa-flask
+          Acerca de Nosotros
+      %li.show-modal.nav-contact{"data-modal" => "contact"}
+        %a{:href => "#"}
+          %i.fa.fa-users
+          Contactanos
+  %section#modal
+    .bt-modal-close
+      %span
+    %article#modal-newsletter
+      .container
+        .row
+          .col-md-12
+            %h2
+              %i.fa.fa-envelope-o
+              SUSCRÍBETE A NUESTRO BOLETÍN DE NOTICIAS
+          .col-md-6
+            %p
+              Serás el primero en enterarte cuando comencemos. Recibe información y noticias sobre nuestra organización para mantenerte al tanto de nuestras actividades.
+          .col-md-6
+            %p#success-submit 
+            - @country = Geocoder::search(@client_ip).first.country
+            = form_for Lead.new, remote:true, :html => {:class => 'form-inline', :id => 'newsletter-form'} do |f|
+              .form-group
+                = f.label :email, class: 'sr-only'
+                = f.email_field :email, {class: 'form-control', id: 'emailInputNewsletter', placeholder: 'Tu Email'}
+                = f.hidden_field :device, :value => request.env['mobvious.device_type']
+                = f.hidden_field :country, :value => @country
+                = f.button 'Enviar', {id: 'newsletter-submit', class: 'btn btn-submit'}
+              %small Tranquilo(a), no utilizaremos tu correo para enviar spam.
+              #newsletter-form-response
+                - if notice
+                  %p.done= notice
+                - if alert
+                  %p.notice= alert
+    %article#modal-about
+      .container
+        .row
+          .col-md-12
+            %h2
+              %i.fa.fa-flask
+              Acerca de Voluntario
+            .col-lg-6
+              %h3{:style => "margin-top:0;"} ¿Quienes Sómos?
+              %p Voluntari.org es una iniciativa que fomenta la cultura de voluntariado brindando información interesante y real sobre instituciones e organizaciones benéficas.
+            .col-lg-6
+              %h3{:style => "margin-top:0;"} ¿Qué hacemos?
+              %p A través de nuestro portal trabajamos la motivación para que más personas decidan involucrarse con iniciativas sociales, construimos redes de interacción y participación voluntaria, y creamos vínculos de colaboración a largo plazo entre dichos individuos y las organizaciones partícipes.
+    %article#modal-contact
+      .container
+        .row
+          .col-md-12
+            %h2
+              %i.fa.fa-users
+              Contacto
+          .col-md-6
+            %h3 Dirección
+            %address
+              %strong Volutario.pe
+              %br/
+              San Borja Sur #679
+              %br/
+              Lima, Perú
+              %br/
+              %abbr{:title => "Phone"} Telf.:
+              (+51) 992-683358
+              %br/
+              %a{:href => "mailto:#"} contacto@voluntario.pe
+            %p
+              Envíanos un mensaje electrónico.
+          .col-md-6
+            %h3 Donde estamos ubicados?
+            .google-maps
+              %div{:style => "width:300px"}
+                #map{:style => "width:300px;height:200px;"}
+  %section#head
+    .container
+      .row.animated{"data-animation" => "bounceInDown", "data-animation-delay" => "500"}
+        .col-md-12.text-center
+          %img.logo{:alt => "Voluntario", :src => "assets/logo2.png"}/
+          %h1.title-h1 ¡Estamos en Construcción!
+          %hr/
+          %h3.info-text
+            Bienvenidos a
+            %b Voluntario.pe
+            %br/
+            Estamos desarrollando al primer portal de voluntariado y responsabilidad social online de nuestro país.
+            Suscríbete y te avisaremos apenas abramos las puertas de nuestra nueva comunidad.
+            Únete a la evolución del trabajo voluntario en el Perú.
+            %br/
+            %br/
+            %a.show-modal.btn.btn-default{"data-modal" => "newsletter", :href => "#"}
+              %i.fa.fa-envelope-o
+              SUSCRIBIRSE
+    / container
+  %footer
+    .container
+      .row.text-center.animated{"data-animation" => "bounceIn", "data-animation-delay" => "200"}
+        .col-md-12
+          .social-icons
+            %a.facebook{:href => "https://www.facebook.com/VoluntariOrg", :target => "_blank"}
+              %i.fa.fa-facebook
+            %a.twitter{:href => "https://twitter.com/VoluntariOrg", :target => "_blank"}
+              %i.fa.fa-twitter
+            %a.youtube{:href => "https://www.youtube.com/channel/UC9WII6SzHn8n3BMdLUqKWnA\n", :target => "_blank"}
+              %i.fa.fa-youtube-play
+            %a.linkedin{:href => "https://www.linkedin.com/company/voluntari\n", :target => "_blank"}
+              %i.fa.fa-linkedin
+            %a.pinterest{:href => "https://www.pinterest.com/VoluntariOrg/\n", :target => "_blank"}
+              %i.fa.fa-pinterest
+        %p.copy
+          © Voluntario.pe es gestionado por SumakQausay.
+          %br/
+          Lima, Perú -#{Time.now.year}
+  .bokeh
+  #slides
+    .slides-container
+      %img{:alt => "", :src => "assets/wallp1.jpg"}/
+      %img{:alt => "", :src => "assets/wallp2.jpg"}/
+      %img{:alt => "", :src => "assets/wallp3.jpg"}/
+      %img{:alt => "", :src => "assets/wallp4.jpg"}/
+/ video-wrapper

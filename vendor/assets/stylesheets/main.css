@@ -317,7 +317,6 @@ transition:all 0.9s ease-out;
 }
 #head h1 {
     font-size:40px;
-    line-height:80px;
     font-weight:300;
     margin: 0;
     text-align: center;
@@ -476,7 +475,7 @@ transition:all 0.9s ease-out;
 
 
 footer {
-	padding-top: 50px;
+	padding-top: 40px;
 }
 footer .social-icons a{
 	-moz-box-sizing: border-box;

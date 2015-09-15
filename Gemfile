@@ -68,3 +68,5 @@ gem 'validates_email_format_of'
 gem 'gmaps4rails', '~> 2.1.2'
 # Underscrore 
 gem 'underscore-rails', '~> 1.8.3'
+# Haml
+gem 'haml-rails', '~> 0.9.0'

@@ -9,7 +9,6 @@
 	color:#66AE38;
 }
 .logo {
-	margin-bottom: 25px;
 	width:300px;
 }
 .notice {
@@ -17,4 +16,17 @@
 }
 .info-text{
 	padding:20px 0;
+}
+.save-fail{
+	color:#F19140;
+}
+
+.save-success {
+	color:#54D05E;
+}
+#newsletter-submit {
+	outline:none;
+}
+.title-h1 {
+	margin-top: 15px !important;
 }
